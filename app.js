@@ -5,6 +5,7 @@ const pintarTodo = document.querySelector("#pintarTodo");
 const templateTodo = document.querySelector("#templateTodo").content;
 
 const alert = document.querySelector(".alert");
+const todoInput = document.getElementById("todoInput");
 
 let todos = [];
 
@@ -54,7 +55,7 @@ formulario.addEventListener("submit", (e) => {
     alert.classList.remove("d-none");
     return;
   }
-
+  todoInput.value = "";
   agregarTodo(todo);
   pintarTodos();
 });
